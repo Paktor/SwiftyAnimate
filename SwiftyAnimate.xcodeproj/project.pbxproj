@@ -48,7 +48,6 @@
 		3002F99E1DB7F29B00FF2E53 /* SwiftyAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyAnimate.h; path = Sources/SwiftyAnimate.h; sourceTree = "<group>"; };
 		3002F99F1DB7F29B00FF2E53 /* Animate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animate.swift; path = Sources/Animate.swift; sourceTree = "<group>"; };
 		3002F9A01DB7F29B00FF2E53 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = Sources/DataStructures.swift; sourceTree = "<group>"; };
-		3002F9A11DB7F29B00FF2E53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = "<group>"; };
 		302C45181E31DC2D004EF0AF /* UIView+ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		302C451A1E32B7FF004EF0AF /* TimingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingTests.swift; sourceTree = "<group>"; };
 		302C451C1E32CBA2004EF0AF /* KeyframeAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationTests.swift; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 				3053C0061E2B073F00672422 /* Collection+Extensions.swift */,
 				3002F9A01DB7F29B00FF2E53 /* DataStructures.swift */,
 				3053C0071E2B073F00672422 /* BlockTypes.swift */,
-				3002F9A11DB7F29B00FF2E53 /* Info.plist */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
