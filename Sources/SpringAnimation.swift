@@ -16,14 +16,14 @@ public struct SpringAnimation: Animation {
     public let delay: TimeInterval
     /// The damping value to apply to the spring animation.
     public let damping: CGFloat
-    /// The inital velocity of the animation.
+    /// The initial velocity of the animation.
     public let velocity: CGFloat
     /// The options to apply to the animation.
-    public let options: UIViewAnimationOptions
+    public let options: UIView.AnimationOptions
     /// The block containing the animations to perform.
     public let animationBlock: AnimationBlock
     
-    /// Performs the animations for the aniamtion object with the given completion handler.
+    /// Performs the animations for the animation object with the given completion handler.
     /// - parameter completion: The completion handler when the animation finishes.
     public func performAnimations(completion: ((Bool) -> Void)?) {
         UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: damping, initialSpringVelocity: velocity, options: options, animations: animationBlock, completion: completion)

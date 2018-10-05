@@ -97,11 +97,11 @@ public extension UIView {
      - parameter duration: Duration for the transformation.
      - parameter delay: Takes a time interval to delay the animation.
      - parameter color: Value for the new background color.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      
      - returns: Animate instance.
      */
-    public func color(duration: TimeInterval, delay: TimeInterval = 0.0, color value: UIColor, options: UIViewAnimationOptions = []) -> Animate {
+    public func color(duration: TimeInterval, delay: TimeInterval = 0.0, color value: UIColor, options: UIView.AnimationOptions = []) -> Animate {
         return Animate(duration: duration, delay: delay, options: options) { [weak self] in
             self?.color(value)
         }
@@ -114,11 +114,11 @@ public extension UIView {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter x: Value to scale in the x direction.
      - parameter y: Value to scale in the y direction.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      
      - returns: Animate instance.
      */
-    public func scaled(duration: TimeInterval, delay: TimeInterval = 0.0, x: CGFloat, y: CGFloat, options: UIViewAnimationOptions = []) -> Animate {
+    public func scaled(duration: TimeInterval, delay: TimeInterval = 0.0, x: CGFloat, y: CGFloat, options: UIView.AnimationOptions = []) -> Animate {
         return Animate(duration: duration, delay: delay, options: options) { [weak self] in
             self?.scale(x: x, y: y)
         }
@@ -131,11 +131,11 @@ public extension UIView {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter delay: Takes a time interval to delay the animation.
      - parameter angle: Degrees to rotate the view.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      
      - returns: Animate instance.
      */
-    public func rotated(duration: TimeInterval, delay: TimeInterval = 0.0, angle: CGFloat, options: UIViewAnimationOptions = []) -> Animate {
+    public func rotated(duration: TimeInterval, delay: TimeInterval = 0.0, angle: CGFloat, options: UIView.AnimationOptions = []) -> Animate {
         return Animate(duration: duration, delay: delay, options: options) { [weak self] in
             self?.rotate(angle: angle)
         }
@@ -148,11 +148,11 @@ public extension UIView {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter x: Value to shift in the x direction.
      - parameter y: Value to shift in the y direction.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      
      - returns: Animate instance.
      */
-    public func translated(duration: TimeInterval, delay: TimeInterval = 0.0, x: CGFloat, y: CGFloat, options: UIViewAnimationOptions = []) -> Animate {
+    public func translated(duration: TimeInterval, delay: TimeInterval = 0.0, x: CGFloat, y: CGFloat, options: UIView.AnimationOptions = []) -> Animate {
         return Animate(duration: duration, delay: delay, options: options) { [weak self] in
             self?.move(x: x, y: y)
         }
@@ -164,11 +164,11 @@ public extension UIView {
      - parameter duration: Duration for the transformation.
      - parameter delay: Takes a time interval to delay the animation.
      - parameter transforms: Array of transformations to be performed on the view represented by `Transform` enum cases.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      
      - returns: Animate instance.
      */
-    public func transform(duration: TimeInterval, delay: TimeInterval = 0.0, transforms: [Transform], options: UIViewAnimationOptions = []) -> Animate {
+    public func transform(duration: TimeInterval, delay: TimeInterval = 0.0, transforms: [Transform], options: UIView.AnimationOptions = []) -> Animate {
         return Animate(duration: duration, delay: delay, options: options) { [weak self] in
             self?.transformed(by: transforms)
         }

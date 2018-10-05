@@ -37,13 +37,13 @@ open class Animate {
      
      - parameter duration: The duration that the animation should take.
      - parameter delay: Takes a time interval to delay the animation.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: An animation instance.
      
      */
-    convenience public init(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) {
+    convenience public init(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) {
         self.init(animation: StandardAnimation(duration: duration, delay: delay, options: options, animationBlock: animationBlock))
     }
     
@@ -63,12 +63,12 @@ open class Animate {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter springDamping: Takes the spring damping for the animation. 1.0 gives a smooth animation with a number closer to 0.0 having higher oscillation.
      - parameter initialVelocity: The initial velocity for the view as a ratio of it's distance to it's final position in points per second. If the distance is 200 points then an initial velocity of 0.5 would be 100 points per second.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: An animation instance.
      */
-    convenience public init(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) {
+    convenience public init(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) {
         self.init(animation: SpringAnimation(duration: duration, delay: delay, damping: springDamping, velocity: initialVelocity, options: options, animationBlock: animationBlock))
     }
     
@@ -135,12 +135,12 @@ open class Animate {
      
      - parameter duration: The duration that the animation should take.
      - parameter delay: Takes a time interval to delay the animation.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: The current animation instance.
      */
-    open func then(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
+    open func then(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
         return then(animation: StandardAnimation(duration: duration, delay: delay, options: options, animationBlock: animationBlock))
     }
     
@@ -163,12 +163,12 @@ open class Animate {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter springDamping: Takes the spring damping for the animation. 1.0 gives a smooth animation with a number closer to 0.0 having higher oscillation.
      - parameter initialVelocity: The initial velocity for the view as a ratio of it's distance to it's final position in points per second. If the distance is 200 points then an initial velocity of 0.5 would be 100 points per second.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: The current animation instance.
      */
-    open func then(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
+    open func then(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
         return then(animation: SpringAnimation(duration: duration, delay: delay, damping: springDamping, velocity: initialVelocity, options: options, animationBlock: animationBlock))
     }
     
@@ -193,11 +193,11 @@ open class Animate {
      ```
      
      - parameter keyframes: An array of `Keyframe` objects representing the keyframes to be animated.
-     - parameter options: The `UIViewKeyframeAnimationOptions` to apply to the animation.
+     - parameter options: The `UIView.KeyframeAnimationOptions` to apply to the animation.
      
      - returns: The current animation instance.
      */
-    open func then(keyframes: [Keyframe], options: UIViewKeyframeAnimationOptions = []) -> Animate {
+    open func then(keyframes: [Keyframe], options: UIView.KeyframeAnimationOptions = []) -> Animate {
         return then(animation: KeyframeAnimation(keyframes: keyframes, options: options))
     }
     
@@ -266,12 +266,12 @@ open class Animate {
      
      - parameter duration: The duration that the animation should take.
      - parameter delay: Takes a time interval to delay the animation.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: The current animation instance.
      */
-    open func and(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
+    open func and(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
         return and(animation: StandardAnimation(duration: duration, delay: delay, options: options, animationBlock: animationBlock))
     }
     
@@ -293,12 +293,12 @@ open class Animate {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter springDamping: Takes the spring damping for the animation. 1.0 gives a smooth animation with a number closer to 0.0 having higher oscillation.
      - parameter initialVelocity: The initial velocity for the view as a ratio of it's distance to it's final position in points per second. If the distance is 200 points then an initial velocity of 0.5 would be 100 points per second.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      
      - returns: The current animation instance.
      */
-    open func and(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
+    open func and(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) -> Animate {
         return and(animation: SpringAnimation(duration: duration, delay: delay, damping: springDamping, velocity: initialVelocity, options: options, animationBlock: animationBlock))
     }
     
@@ -325,11 +325,11 @@ open class Animate {
      ```
      
      - parameter keyframes: An array of `Keyframe` objects representing the keyframes to be animated.
-     - parameter options: The `UIViewKeyframeAnimationOptions` to apply to the animation.
+     - parameter options: The `UIView.KeyframeAnimationOptions` to apply to the animation.
      
      - returns: The current animation instance.
      */
-    open func and(keyframes: [Keyframe], options: UIViewKeyframeAnimationOptions = []) -> Animate {
+    open func and(keyframes: [Keyframe], options: UIView.KeyframeAnimationOptions = []) -> Animate {
         return and(animation: KeyframeAnimation(keyframes: keyframes, options: options))
     }
     
@@ -546,10 +546,10 @@ open class Animate {
      
      - parameter duration: The duration that the animation should take.
      - parameter delay: Takes a time interval to delay the animation.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is none.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is none.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      */
-    open func finish(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) {
+    open func finish(duration: TimeInterval, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) {
         _ = then(duration: duration, delay: delay, options: options, animationBlock: animationBlock)
         perform()
     }
@@ -571,10 +571,10 @@ open class Animate {
      - parameter delay: Takes a time interval to delay the animation.
      - parameter springDamping: Takes the spring damping for the animation. 1.0 gives a smooth animation with a number closer to 0.0 having higher oscillation.
      - parameter initialVelocity: The initial velocity for the view as a ratio of it's distance to it's final position in points per second. If the distance is 200 points then an initial velocity of 0.5 would be 100 points per second.
-     - parameter options: Takes a set of UIViewAnimationOptions. Default is an empty array.
+     - parameter options: Takes a set of UIView.AnimationOptions. Default is an empty array.
      - parameter animationBlock: `Animation` callback to perform over the duration passed in.
      */
-    open func finish(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIViewAnimationOptions = [], animationBlock: @escaping AnimationBlock) {
+    open func finish(duration: TimeInterval, delay: TimeInterval = 0.0, springDamping: CGFloat, initialVelocity: CGFloat, options: UIView.AnimationOptions = [], animationBlock: @escaping AnimationBlock) {
         _ = then(duration: duration, delay: delay, springDamping: springDamping, initialVelocity: initialVelocity, options: options, animationBlock: animationBlock)
         perform()
     }

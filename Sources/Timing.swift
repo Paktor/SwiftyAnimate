@@ -34,10 +34,10 @@ public enum Timing {
     
     var coreAnimationCurve: CAMediaTimingFunction {
         switch self {
-        case .easeIn: return .init(name: kCAMediaTimingFunctionEaseIn)
-        case .easeOut: return .init(name: kCAMediaTimingFunctionEaseOut)
-        case .easeInOut: return .init(name: kCAMediaTimingFunctionEaseInEaseOut)
-        case .linear: return .init(name: kCAMediaTimingFunctionLinear)
+        case .easeIn: return .init(name: CAMediaTimingFunctionName.easeIn)
+        case .easeOut: return .init(name: CAMediaTimingFunctionName.easeOut)
+        case .easeInOut: return .init(name: CAMediaTimingFunctionName.easeInEaseOut)
+        case .linear: return .init(name: CAMediaTimingFunctionName.linear)
         }
     }
     

@@ -15,17 +15,17 @@ public struct KeyframeAnimation {
     /// The `Keyframe` objects representing the keyframes to be animated.
     public let keyframes: [Keyframe]
     /// The `UIViewKeyframeAnimationOptions` to apply to the animation.
-    public let options: UIViewKeyframeAnimationOptions
+    public let options: UIView.KeyframeAnimationOptions
     
     /**
      Initializes and returns a `KeyframeAnimation` instance representing a keyframe animation.
      
      - parameter keyframes: An array of `Keyframe` objects representing the keyframes to be animated.
-     - parameter options: The `UIViewKeyframeAnimationOptions` to apply to the animation.
+     - parameter options: The `UIView.KeyframeAnimationOptions` to apply to the animation.
      
      - returns An initialized `KeyframeAnimation` instance.
      */
-    public init(keyframes: [Keyframe], options: UIViewKeyframeAnimationOptions = []) {
+    public init(keyframes: [Keyframe], options: UIView.KeyframeAnimationOptions = []) {
         self.keyframes = keyframes
         self.options = options
     }
