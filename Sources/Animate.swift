@@ -92,11 +92,11 @@ open class Animate {
      ```
      
      - parameter keyframes: An array of `Keyframe` objects representing the keyframes to be animated.
-     - parameter options: The `UIViewKeyframeAnimationOptions` to be applied to the animation.
+     - parameter options: The `UIView.KeyframeAnimationOptions` to be applied to the animation.
      
      - returns: An animation instance.
      */
-    convenience public init(keyframes: [Keyframe], options: UIViewKeyframeAnimationOptions = []) {
+    convenience public init(keyframes: [Keyframe], options: UIView.KeyframeAnimationOptions = []) {
         self.init(animation: KeyframeAnimation(keyframes: keyframes, options: options))
     }
     
@@ -599,11 +599,11 @@ open class Animate {
      ```
      
      - parameter keyframes: An array of `Keyframe` objects representing the keyframes to be animated.
-     - parameter options: The `UIViewKeyframeAnimationOptions` to apply to the animation.
+     - parameter options: The `UIView.KeyframeAnimationOptions` to apply to the animation.
      
      - returns: The current animation instance.
      */
-    open func finish(keyframes: [Keyframe], options: UIViewKeyframeAnimationOptions = []) {
+    open func finish(keyframes: [Keyframe], options: UIView.KeyframeAnimationOptions = []) {
         _ = then(keyframes: keyframes, options: options)
         perform()
     }
